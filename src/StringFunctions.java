@@ -58,7 +58,7 @@ public class StringFunctions{
         }
     }
 
-    public static void wordContains(String s){
+    public static void wordContains(String s,String str){
         s = s + " ";
         String word = "";
         for(int i = 0; i < s.length(); i++){
@@ -66,7 +66,7 @@ public class StringFunctions{
             if(ch != ' '){
                 word += ch;
             }else{
-                if(word.contains("k"))
+                if(word.contains(str))
                     System.out.println(word);
                 word = "";
             }
@@ -272,7 +272,8 @@ public class StringFunctions{
         printFirstCharOfEachWord(s);
         sunStringOfEachWord(s);
         wordStartsWith(s);
-        wordContains(s);
+        String s2 = "k";
+        wordContains(s,s2);
         wordLength(s);
         specialWords(s1);
         longestWord(s);
@@ -295,7 +296,7 @@ public class StringFunctions{
 
         capitaliseEachWord(s);
 
-        swapFirstAndLastLetter(str);
+        swapFirstAndLastLetter(s);
 
 
 

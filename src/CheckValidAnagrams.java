@@ -22,12 +22,17 @@ public class CheckValidAnagrams {
             countChar[s1.charAt(i) - 'a']++;
             countChar[s2.charAt(i) - 'a']--;
         }
+        for(int i = 0; i < countChar.length; i++){
+            if(countChar[i] != 0){
+                return false;
+            }
+        }
         return true;
     }
 
     public static void main(String[] args) {
         String s1 = "car";
-        String s2 = "rac";
+        String s2 = "rae";
         boolean isAnagram = isAnagram(s1, s2);
         System.out.println(isAnagram);
 
