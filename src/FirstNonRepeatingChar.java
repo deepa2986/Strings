@@ -38,5 +38,9 @@ public class FirstNonRepeatingChar {
         firstNonRepeatingCharUsingHashMap(s);
         firstNonRepeatingCharLinkedHashMap(s);
 
+        String s1 = "charahcter";
+        firstNonRepeatingCharLinkedHashMap(s1);
+        firstNonRepeatingCharUsingHashMap(s1);
+
     }
 }

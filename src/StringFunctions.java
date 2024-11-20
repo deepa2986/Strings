@@ -28,7 +28,7 @@ public class StringFunctions{
         }
     }
 
-    public static void sunStringOfEachWord(String s){
+    public static void subStringOfEachWord(String s,int beginIndex,int endIndex){
 
         s = s + " ";
         String word = "";
@@ -37,13 +37,13 @@ public class StringFunctions{
             if(c != ' '){
                 word += c;
             }else{
-                System.out.println(word.substring(0,2));
+                System.out.println(word.substring(beginIndex,endIndex));
                 word = "";
             }
         }
     }
 
-    public static void wordStartsWith(String s){
+    public static void wordStartsWith(String s, String stw){
         s = s + " ";
         String word = "";
         for (int i = 0; i < s.length(); i++){
@@ -51,7 +51,7 @@ public class StringFunctions{
             if(c != ' '){
                 word += c;
             }else {
-                if(word.startsWith("h"))
+                if(word.startsWith(stw))
                     System.out.println(word);
                 word = "";
             }
@@ -270,8 +270,11 @@ public class StringFunctions{
         String s1 = "mom is going to meet dad";
         eachWord(s);
         printFirstCharOfEachWord(s);
-        sunStringOfEachWord(s);
-        wordStartsWith(s);
+        int beginIndex = 0;
+        int endIndex = 2;
+        subStringOfEachWord(s,beginIndex,endIndex);
+        String startsWith = "h";
+        wordStartsWith(s,startsWith);
         String s2 = "k";
         wordContains(s,s2);
         wordLength(s);

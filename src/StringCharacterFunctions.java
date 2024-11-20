@@ -52,7 +52,7 @@ public class StringCharacterFunctions {
         System.out.println(upperCount);
     }
 
-    public static void stringContainsOnlyUpperChar(String s){
+    public static void printStringContainsOnlyUpperChar(String s){
         String upperString = "";
         for(int i = 0; i < s.length(); i++){
             char ch = s.charAt(i);
@@ -62,7 +62,7 @@ public class StringCharacterFunctions {
         System.out.println(upperString);
     }
 
-    public static void digitsFirstThenCharString(String s){
+    public static void printDigitsFirstThenCharString(String s){
         String digitString = "";
         String charString = "";
         for(int i = 0; i < s.length(); i++){
@@ -75,7 +75,7 @@ public class StringCharacterFunctions {
         System.out.println(digitCharStr);
     }
 
-    public static void upperCaseThenRemainingString(String s){
+    public static void printUpperCaseThenRemainingString(String s){
         String upperString = "";
         String remaingString = "";
         for(int i = 0; i < s.length(); i++){
@@ -119,9 +119,14 @@ public class StringCharacterFunctions {
     }
 
     public static void checkPalindrome(String s){
+        String reverse = "";
         for(int i = 0; i < s.length(); i++){
             char ch = s.charAt(i);
+            reverse = ch + reverse;
         }
+        if (reverse.equals(s))
+            System.out.println("its palindrome");
+        else System.out.println("not a palindrome");
     }
     public static void main(String[] args) {
         String s = "SimpLe Girl";
@@ -134,18 +139,21 @@ public class StringCharacterFunctions {
         countVowels(s);
 
         countLowerUpperChar(s);
-        stringContainsOnlyUpperChar(s);
+        printStringContainsOnlyUpperChar(s);
 
         String st = "r8oy9d8j9 1new4yrk";
-        digitsFirstThenCharString(st);
+        printDigitsFirstThenCharString(st);
 
-        upperCaseThenRemainingString(s);
+       printUpperCaseThenRemainingString(s);
 
         removeWhiteSpace(s);
 
         reverseCaseOfString(str);
 
         reverseString(str);
+
+        String s1 = "mom";
+        checkPalindrome(s1);
 
 
 
