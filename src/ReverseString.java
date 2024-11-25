@@ -33,6 +33,19 @@ public class ReverseString {
             System.out.print(stack.pop());
         }
     }
+
+    public static void reverseStrings(char[] chars){
+        int start = 0;
+        int end = chars.length - 1;
+        while (start < end){
+            char temp = chars[start];
+            chars[start] = chars[end];
+            chars[end] = temp;
+            start++;
+            end--;
+        }
+    }
+
     public static void main(String[] args) {
 
         String s = "australia";
@@ -43,6 +56,11 @@ public class ReverseString {
         System.out.println(reverseString);
 
         reverseStringUsingStack(s);
+
+        System.out.println();
+        char[] chars = s.toCharArray();
+        reverseStrings(chars);
+        System.out.println(chars);
 
 
     }
